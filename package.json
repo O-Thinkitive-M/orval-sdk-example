@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preinstall": "node scripts/check-node.cjs",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-sdk": "orval"
+  },
+  "engines": {
+    "node": ">=22.18.0",
+    "npm": ">=10"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",
